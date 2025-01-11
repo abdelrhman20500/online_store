@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
           const CategorySearch(),
           SizedBox(height: MediaQuery.of(context).size.height*0.01,),
           const Text("Categories", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
-          const AllCategoryListView(),
+          AllCategoryListView(),
           const Expanded(
               child: ProductListViewItem()),
         ],
