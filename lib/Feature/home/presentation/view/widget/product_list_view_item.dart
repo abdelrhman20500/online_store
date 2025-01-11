@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProductListView extends StatelessWidget {
-  const ProductListView({super.key});
+class ProductListViewItem extends StatelessWidget {
+  const ProductListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,14 +57,18 @@ class ProductListView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text("33 p",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
-                  Icon(
-                    Icons.shopping_cart_checkout, size: 28,)
-                ],
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  children: [
+                    Text("33 p",
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                    Spacer(),
+                    Text("(3.9)",
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                    Icon(Icons.star, color: Colors.yellow,)
+                  ],
+                ),
               )
             ],
           ),

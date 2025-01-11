@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_store/Feature/home/presentation/view/widget/product_list_view.dart';
+import 'package:online_store/Feature/home/presentation/view/widget/product_list_view_item.dart';
 
 class GetCategory extends StatelessWidget {
   const GetCategory({super.key});
@@ -19,7 +19,7 @@ class GetCategory extends StatelessWidget {
       ),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
-        child: ProductListView(),
+        child: ProductListViewItem(),
       ),
     );
   }
