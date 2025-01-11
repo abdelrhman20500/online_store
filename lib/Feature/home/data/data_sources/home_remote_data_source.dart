@@ -16,9 +16,9 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
     return products;
   }
 
-  List<ProductEntity> getProductsList(Map<String, dynamic> data) {
+  List<ProductEntity> getProductsList(List<dynamic> data) {
     List<ProductEntity> products = [];
-    for(var productMap in data[" "])
+    for(var productMap in data)
       {
         products.add(ProductModel.fromJson(productMap));
       }
