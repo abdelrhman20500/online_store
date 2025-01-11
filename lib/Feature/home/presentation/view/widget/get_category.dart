@@ -13,7 +13,7 @@ class GetCategory extends StatelessWidget {
             {
               Navigator.pop(context);
             }, icon: const Icon(Icons.arrow_back)),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.grey.withOpacity(0.5),
         centerTitle: true,
         title:  Text(title,
           style: const TextStyle(fontSize: 22, color: Colors.black,fontWeight: FontWeight.bold),),
