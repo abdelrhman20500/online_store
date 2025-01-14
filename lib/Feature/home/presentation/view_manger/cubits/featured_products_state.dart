@@ -9,7 +9,7 @@ class FeaturedProductsFailure extends FeaturedProductsState{
   FeaturedProductsFailure(this.errMessage);
 }
 class FeaturedProductsSuccess extends FeaturedProductsState{
-  final ProductEntity product;
+  final List<ProductEntity> product;
 
   FeaturedProductsSuccess(this.product);
 }
