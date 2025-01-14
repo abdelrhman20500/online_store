@@ -1,13 +1,16 @@
+import 'package:hive/hive.dart';
+import 'package:online_store/constant/constant.dart';
+
 import '../../domain/Entities/product_entity.dart';
 
 abstract class HomeLocalDataSource {
   List<ProductEntity> fetchFeaturedProduct();
 }
 
-class HomeLocalDataSourceImple extends HomeLocalDataSource{
+class HomeLocalDataSourceImpl extends HomeLocalDataSource{
   @override
   List<ProductEntity> fetchFeaturedProduct() {
-    // TODO: implement fetchFeaturedProduct
-    throw UnimplementedError();
+  var box = Hive.box<ProductEntity>(kFeaturedBox);
+  return box.values.toList();
   }
 }
