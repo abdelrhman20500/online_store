@@ -12,7 +12,9 @@ class ProductView extends StatelessWidget {
     return BlocBuilder<FeaturedProductsCubit, FeaturedProductsState>(
       builder: (context, state) {
         if (state is FeaturedProductsSuccess) {
-          return const ProductGridView();
+          return  ProductGridView(
+            product: state.product,
+          );
         } else if (state is FeaturedProductsFailure) {
           print(state.errMessage);
           return Text(state.errMessage);

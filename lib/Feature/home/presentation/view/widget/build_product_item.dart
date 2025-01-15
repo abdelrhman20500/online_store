@@ -1,9 +1,15 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BuildProductItem extends StatelessWidget {
-  const BuildProductItem({
-    super.key,
-  });
+  const BuildProductItem({super.key,
+    required this.title, required this.image,
+    required this.description, required this.price,});
+
+  final String title;
+  final String image;
+  final String description;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -25,41 +31,41 @@ class BuildProductItem extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: const AspectRatio(
-              aspectRatio: 14 / 12,
-              child: Image(
-                image: AssetImage("assets/images/picture.jpg"),
-                fit: BoxFit.fill,
+            child: Center(
+              child: CachedNetworkImage(
+                  imageUrl: image, fit: BoxFit.cover,
+                height: MediaQuery.of(context).size.height*0.2,
               ),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.001),
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0),
-            child: Text("Title",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+           Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(title,
+              maxLines: 2,overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.001),
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0),
-            child: Text("Description Description Description Description Description",
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(description,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
-                Text("33 p",
+                Text(price.toString(),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                const Spacer(),
+                const Text("(3.9)",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
-                Spacer(),
-                Text("(3.9)",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
-                Icon(Icons.star, color: Colors.yellow,)
+                const Icon(Icons.star, color: Colors.yellow,)
               ],
             ),
           )
