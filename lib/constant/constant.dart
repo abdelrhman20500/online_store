@@ -1,1 +1,1 @@
-const kFeaturedBox= "featured_box";
+const kProductBox= "product_box";
