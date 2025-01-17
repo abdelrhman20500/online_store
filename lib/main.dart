@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:online_store/Core/utils/functions/set_up_service_locator.dart';
 import 'package:online_store/Feature/home/data/Repos/home_repo_impl.dart';
+import 'package:online_store/Feature/home/domain/Entities/category_name_entity/category_name_entity.dart';
 import 'package:online_store/Feature/home/domain/Entities/product_entity.dart';
 import 'package:online_store/Feature/home/domain/use_cases/fetch_featured_product_use_case.dart';
 import 'package:online_store/Feature/home/presentation/view/home_view.dart';
@@ -17,6 +18,8 @@ void main() async {
   setUpServiceLocator();
   await Hive.openBox<ProductEntity>(kProductBox);
   Bloc.observer= SimpleBlocObserver();
+  Hive.registerAdapter(CategoryNameEntityAdapter());
+  await Hive.openBox(kCategoryBox);
   runApp(const MyApp());
 }
 
