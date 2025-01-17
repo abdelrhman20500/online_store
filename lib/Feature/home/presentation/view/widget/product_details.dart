@@ -30,7 +30,7 @@ class ProductDetails extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AspectRatio(
-                aspectRatio: 12/12,
+                aspectRatio: 2.7/2,
                 child: Container(
                   decoration:  BoxDecoration(
                     borderRadius: BorderRadius.circular(16),

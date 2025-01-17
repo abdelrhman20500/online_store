@@ -7,7 +7,6 @@ import 'package:online_store/Feature/home/domain/Entities/product_entity.dart';
 import 'package:online_store/Feature/home/domain/use_cases/fetch_featured_product_use_case.dart';
 import 'package:online_store/Feature/home/presentation/view/home_view.dart';
 import 'package:online_store/Feature/home/presentation/view_manger/cubits/featured_products_cubit.dart';
-
 import 'Core/utils/functions/simple_bloc_observer.dart';
 import 'constant/constant.dart';
 
