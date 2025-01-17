@@ -1,5 +1,7 @@
 
-class CategoryNameModel {
+import 'package:online_store/Feature/home/domain/Entities/category_name_entity/category_name_entity.dart';
+
+class CategoryNameModel extends CategoryNameEntity{
   int? id;
   String? title;
   int? price;
@@ -8,7 +10,9 @@ class CategoryNameModel {
   String? image;
   Rating? rating;
 
-  CategoryNameModel({this.id, this.title, this.price, this.description, this.category, this.image, this.rating});
+  CategoryNameModel({this.id, this.title, this.price, this.description, this.category, this.image, this.rating
+  }):super(id: id, title: title,price: price,description: description,category: category,image:image,
+  rating: rating);
 
   CategoryNameModel.fromJson(Map<String, dynamic> json) {
     if(json["id"] is num) {

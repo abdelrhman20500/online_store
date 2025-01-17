@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_store/Feature/home/data/models/category_model.dart';
+import 'package:online_store/Feature/home/data/models/category_name/category_model.dart';
 import 'package:online_store/Feature/home/presentation/view/widget/get_category.dart';
 
 class BuildAllCategoryItem extends StatelessWidget {
