@@ -4,8 +4,8 @@ import 'package:online_store/Feature/home/presentation/view/widget/product_grid_
 import 'package:online_store/Feature/home/presentation/view_manger/cubits/featured_products_cubit.dart';
 import 'package:online_store/Feature/home/presentation/view_manger/cubits/featured_products_state.dart';
 
-class ProductView extends StatelessWidget {
-  const ProductView({super.key});
+class ProductViewBlocBuilder extends StatelessWidget {
+  const ProductViewBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {

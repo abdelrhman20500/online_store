@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_store/Feature/home/presentation/view/widget/product_view.dart';
+import 'package:online_store/Feature/home/presentation/view/widget/product_view_bloc_builder.dart';
 
 import 'all_category_list_view.dart';
 import 'category_search.dart';
@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
           const Text("Categories", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
           AllCategoryListView(),
           const Expanded(
-              child: ProductView()),
+              child: ProductViewBlocBuilder()),
         ],
       ),
     );
