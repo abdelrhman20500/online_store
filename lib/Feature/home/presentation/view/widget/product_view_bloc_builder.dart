@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_store/Feature/home/presentation/view/widget/product_grid_view.dart';
-import 'package:online_store/Feature/home/presentation/view_manger/cubits/featured_products_cubit.dart';
-import 'package:online_store/Feature/home/presentation/view_manger/cubits/featured_products_state.dart';
+import 'package:online_store/Feature/home/presentation/view_manger/cubits/product_cubit/featured_products_cubit.dart';
+import 'package:online_store/Feature/home/presentation/view_manger/cubits/product_cubit/featured_products_state.dart';
 
 class ProductViewBlocBuilder extends StatelessWidget {
   const ProductViewBlocBuilder({super.key});
