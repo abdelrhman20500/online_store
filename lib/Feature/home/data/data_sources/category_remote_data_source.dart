@@ -1,6 +1,9 @@
 import 'package:online_store/Core/utils/api_service.dart';
 import 'package:online_store/Feature/home/data/models/category_name/category_name_model.dart';
 import 'package:online_store/Feature/home/domain/Entities/category_name_entity/category_name_entity.dart';
+import 'package:online_store/constant/constant.dart';
+
+import '../../../../Core/utils/functions/category_save_data.dart';
 
 abstract class CategoryRemoteDataSource {
   Future<List<CategoryNameEntity>> fetchCategoryByName(String categoryName);
@@ -14,9 +17,13 @@ class CategoryRemoteDataSourceImp extends CategoryRemoteDataSource{
   Future<List<CategoryNameEntity>> fetchCategoryByName(String categoryName) async{
     var data = await apiService.get(endpoint: "products/category/$categoryName");
     List<CategoryNameEntity> category = getCategoryList(data);
+    categorySaveData(category, kCategoryBox);
     return category;
   }
 
+
+
+  /// method...
   List<CategoryNameEntity> getCategoryList(List<dynamic> data) {
     List<CategoryNameEntity> category= [];
     for(var categoryMap in data)
